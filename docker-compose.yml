@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  database:
+    image: 'postgres:latest'
+    container_name: 'payment_container'
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=payment_user
+      - POSTGRES_DB=payment_db
