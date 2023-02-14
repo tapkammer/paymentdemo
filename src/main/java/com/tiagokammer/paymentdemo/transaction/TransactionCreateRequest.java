@@ -1,6 +1,7 @@
 package com.tiagokammer.paymentdemo.transaction;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,6 +27,7 @@ public class TransactionCreateRequest {
     public Integer operationTypeId;
 
     @NotNull
+    @Min(0)
     @JsonProperty("amount")
     public BigDecimal amount;
 }

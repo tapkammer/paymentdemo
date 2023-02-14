@@ -13,6 +13,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @Builder
@@ -30,5 +32,8 @@ public class AccountEntity {
 
     @Column(name = "document_number")
     private String documentNumber;
+
+    @Column(name = "available_credit_limit")
+    private BigDecimal availableCreditLimit;
 
 }

@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @Builder
@@ -19,4 +21,7 @@ public class AccountResponse {
 
     @JsonProperty("document_number")
     private String documentNumber;
+
+    @JsonProperty("available_credit_limit")
+    private BigDecimal availableCreditLimit;
 }

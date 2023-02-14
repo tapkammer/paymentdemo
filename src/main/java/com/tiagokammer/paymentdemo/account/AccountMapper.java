@@ -8,7 +8,8 @@ public class AccountMapper {
     public AccountEntity toEntity(AccountCreateRequest accountCreateRequest) {
         return AccountEntity.builder()
                 .accountId(null)
-                .documentNumber(accountCreateRequest.documentNumber)
+                .documentNumber(accountCreateRequest.getDocumentNumber())
+                .availableCreditLimit(accountCreateRequest.getAvailableCreditLimit())
                 .build();
     }
 
@@ -16,6 +17,7 @@ public class AccountMapper {
         return AccountResponse.builder()
                 .accountId(accountEntity.getAccountId())
                 .documentNumber(accountEntity.getDocumentNumber())
+                .availableCreditLimit(accountEntity.getAvailableCreditLimit())
                 .build();
     }
 }
